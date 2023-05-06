@@ -1,9 +1,10 @@
 
 body {
- color: $default;
+ color: $title;
  font-size: 20px;
  line-height: 1.5;
- @extend %rubik-400
+ @extend %rubik-400;
+ background-color: $default;
 }
 
 .container{
