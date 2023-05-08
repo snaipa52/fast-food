@@ -47,5 +47,9 @@ button,
 textarea,
 select {
   font: inherit;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  // padding: 0;
   
 }
