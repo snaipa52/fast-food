@@ -1,2 +1,2 @@
 
-    var mixer = mixitup('.category__items');C
+    // var mixer = mixitup('.category__items');

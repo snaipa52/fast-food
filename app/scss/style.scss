@@ -3,13 +3,10 @@
 @import "reset";
 @import "global";
 
-
-
 .animation {
   &:focus {
     box-shadow: 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
     border-radius: 5px;
-    
   }
   &:hover {
     color: $accent;
@@ -18,9 +15,7 @@
   &:active {
     text-shadow: 2px 2px 5px rgba(49, 53, 43, 0.5);
     color: $accent;
-   
   }
-  
 }
 
 .btn {
@@ -61,26 +56,25 @@
   padding: 13px 32px;
   display: flex;
   align-items: center;
-  transition: box-shadow .3s;
-  &:focus{
+  transition: box-shadow 0.3s;
+  &:focus {
     color: $title;
-    background: #FFFFFF;
+    background: #ffffff;
     box-shadow: 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
     border-radius: 5px;
   }
-  &:hover{
+  &:hover {
     background: rgba(255, 122, 80, 0.1);
     box-shadow: 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
     border-radius: 5px;
   }
-  &:active{
+  &:active {
     background: rgba(255, 122, 80, 0.1);
     box-shadow: 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
     border-radius: 5px;
   }
-  
 }
-.mixitup-control-active{
+.mixitup-control-active {
   background-color: $accent;
   color: #fff;
   border-radius: 5px;
@@ -94,49 +88,54 @@
   align-items: center;
 }
 
-
-
 .header {
   padding: 60px 0;
-
-  &__inner {
+  &__logo{
+    margin-right: auto;
+  }
+  &__menu{
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    
+  }
+  
+  .menu {
+      display: flex;
+  
+    &-item:not(:last-child) {
+      margin-right: 45px;
+    }
+    &-item:last-child{
+      margin-right: 60px;
+    }
+  
+    &-link {
+      color: $title;
+      text-decoration: none;
+      transition: all 0.3s;
+      @extend %rubik-400;
+      
+    }
+  
+    &-link--active {
+      color: $accent;
+    }
   }
 }
-
-.logo:focus {
-  box-shadow: 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
-  border-radius: 5px;
+.logo {
+  &:focus {
+    box-shadow: 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
+    border-radius: 5px;
+  }
   &:active {
     opacity: 0.5;
   }
-}
-.logo:hover {
-  opacity: 0.8;
-}
-.menu {
-  margin-left: 400px;
-
-  &__list {
-    display: flex;
-  }
-  &__list-item:not(:last-child) {
-    margin-right: 45px;
-  }
-
-  &__list-link {
-    color: $title;
-    text-decoration: none;
-    transition: all 0.3s;
-    @extend %rubik-400;
-  }
-
-  &__list-link--active {
-    color: $accent;
+  &:hover {
+    opacity: 0.8;
   }
 }
+
+
 
 .user-nav {
   display: flex;
@@ -186,7 +185,7 @@
 }
 .footer-top {
   padding: 30px 0 70px;
-  border-bottom: 1px solid #c2c2c2;
+  // border-bottom: 1px solid #c2c2c2;
   display: flex;
 
   // justify-content: space-between;
@@ -343,12 +342,15 @@
   text-align: center;
   color: $title;
   font-size: 14px;
-  margin-top: 30px;
   height: 74px;
+  border-top: 1px solid rgb(194, 194, 194, 0.2);
+  &__text {
+    padding-top: 30px;
+  }
 }
 
 .delivery {
-    padding: 0 0 60px;
+  padding: 0 0 60px;
   &__wrapper {
     display: flex;
     justify-content: space-between;
@@ -365,14 +367,13 @@
     line-height: 30px;
     font-weight: 400;
     &:focus {
-    text-decoration: none;
+      text-decoration: none;
     }
     &:hover {
       text-decoration: none;
     }
     &:active {
       text-decoration: none;
-
     }
   }
 
@@ -396,10 +397,7 @@
   .subtitle {
     color: $accent;
   }
-  
 }
-
-
 
 .category {
   padding: 60px 0 60px;
@@ -410,7 +408,7 @@
       margin-bottom: 60px;
     }
   }
-  &__links-link:not(:last-child){
+  &__links-link:not(:last-child) {
     margin-right: 20px;
   }
   &__links {
@@ -418,30 +416,25 @@
     // grid-template-columns: repeat(5, 1fr);
     margin-bottom: 20px;
     // align-items: center;
-   &-img{
-    margin-right: 10px;
-   }
-   
+    &-img {
+      margin-right: 10px;
+    }
   }
   &__items {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    height: 645px;
+    // height: 645px;
     grid-gap: 30px;
     margin-top: 20px;
     justify-content: space-between;
-    &-more{
+    &-more {
       display: flex;
       justify-content: center;
 
       text-decoration: underline;
-      margin: 60px auto ;
-    
-
+      margin: 60px auto;
+    }
   }
-
-  }
-  
 
   &__item {
     background-color: #fff;
@@ -453,15 +446,15 @@
     border-radius: 5px;
     box-shadow: 0px 0px 0px 1px #ececec;
     width: 210px;
-    height: 100%;
+    // height: 100%;
     padding: 15px 20px;
     font-size: 15px;
     line-height: 18px;
     font-weight: 400;
-    transition: box-shadow .3s;
-    &:hover{
-      background: #FFFFFF;
-      box-shadow: 0px 0px 0px 1px #FF6838;
+    transition: box-shadow 0.3s;
+    &:hover {
+      background: #ffffff;
+      box-shadow: 0px 0px 0px 1px #ff6838;
       border-radius: 5px;
     }
     &-text {
